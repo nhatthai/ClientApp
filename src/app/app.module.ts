@@ -11,6 +11,7 @@ import { LoginButtonComponent } from '../components/login-button/login-button.co
 import { LogoutButtonComponent } from '../components/logout-button/logout-button.component';
 
 import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,8 @@ import { AuthModule } from '@auth0/auth0-angular';
 
     // 👇 add and initialize AuthModule
     AuthModule.forRoot({
-      domain: 'dfin-sandbox.auth0.com',
-      clientId: 'qgTgoNG7eMQCf2hL4m5OZDZmagAAaVsV'
+      domain: env.auth.domain,
+      clientId: env.auth.clientId
     }),
 
   ],
